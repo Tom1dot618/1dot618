@@ -77,3 +77,49 @@ edge: true
 [build]
 command = "npm run build"
 publish = "build"
+
+# local dev
+
+npm install netlify-cli -g
+
+netlify
+netlify login
+
+config.json location: Library/Preferences/netlify/config.json
+NETLIFY_AUTH_TOKEN (personal acces token)
+
+netlify --telemetry-disable
+netlify --telemetry-enable
+
+netlify init
+netlify init --manual
+
+netlify dev
+netlify dev --live
+
+netlify build
+netlify build --dry
+netlify build --context deploy-preview
+
+netlify deploy
+netlify deploy --dir=\_site --functions=functions
+netlify deploy --prod
+
+netlify link
+netlify unlink
+NETLIFY_SITE_ID (ENV)
+
+DEBUG=\* netlify deploy
+
+netlify help
+netlify help deploy
+netlify help sites:create
+
+git push Push to your git repository to trigger new site builds
+netlify open Open the Netlify admin URL of your site
+
+# Netlify docs
+
+https://docs.netlify.com/integrations/frameworks/sveltekit/
+https://github.com/sveltejs/kit/tree/master/packages/adapter-netlify
+https://docs.netlify.com/cli/get-started/#run-a-local-development-environment
