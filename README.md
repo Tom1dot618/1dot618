@@ -36,3 +36,44 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+
+## Create svelte-kit app
+
+npm init svelte@next 1dot618
+
+cd 1dot618
+npm install (or pnpm install, etc)
+git init && git add -A && git commit -m "Initial commit" (optional)
+npm run dev -- --open
+
+## Netlify
+
+npm install -D @sveltejs/adapter-netlify@next
+
+## svelte.config.js
+
+# netlify adapter
+
+import adapter from '@sveltejs/adapter-netlify';
+
+export default {
+kit: {
+adapter: adapter()
+}
+};
+
+# edge functions
+
+export default {
+kit: {
+adapter: adapter({
+edge: true
+})
+}
+};
+
+# Netlify.toml
+
+[build]
+command = "npm run build"
+publish = "build"
