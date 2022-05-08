@@ -85,6 +85,20 @@ https://docs.netlify.com/integrations/frameworks/sveltekit/
 https://github.com/sveltejs/kit/tree/master/packages/adapter-netlify
 https://docs.netlify.com/cli/get-started/#run-a-local-development-environment
 
+# functions
+
+npm install @netlify/functions
+
+##planetscale
+brew install planetscale/tap/pscale
+brew install mysql-client
+
+scoop update pscale
+$env:path += ";C:\Program Files\MySQL\MySQL Server 8.0\bin"
+
+pscale --help
+pscale version
+
 # create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
